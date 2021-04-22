@@ -45,8 +45,11 @@
       <td>{{e.local}}</td>
       <td>{{e.data}}</td>
       <td>{{e.qtdPessoas}}</td>
-      <td>{{e.local}}</td>
-      <td></td>
+      <td>{{e.lote}}</td>
+      <td>
+        <button type="button" class="btn btn-primary btn-sm mr-2">Editar</button>
+        <button type="button" class="btn btn-danger btn-sm mr-2">Excluir</button>
+      </td>
     </tr>
   </tbody>
   <tfoot *ngIf="!eventos.length">
@@ -58,4 +61,4 @@
   </tfoot>
 </table>
 <h5>DEV:</h5>
-{{eventos | json}}
+<!-- {{eventos | json}} -->
