@@ -21,29 +21,37 @@ namespace WebAPI.Controllers
         }
 
 
-
+ 
         [HttpGet]
-        public Evento Get()
+        public IEnumerable<Evento> Get()
         {
-            return new Evento();
+            return _ctx.Eventos;
+        }
+
+        [HttpGet("{id}")]
+        public Evento GetById(int id)
+        {
+            return _ctx.Eventos.FirstOrDefault(
+                evento => evento.EventoId == id
+            );
         }
 
         [HttpPost]
         public string Post()
         {
-            return "value";
+            return "Exemplo de Post";
         }
 
         [HttpPut("{id}")]
-        public string Put()
+        public string Put(int id)
         {
-            return "value";
+            return $"Exemplo de Put com id = {id}";
         }
 
         [HttpDelete("{id}")]
         public string Delete(int id)
         {
-            return "value";
+            return $"Exemplo de Delete com id = {id}";
         }
     }
 }
