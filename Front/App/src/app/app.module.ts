@@ -3,12 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { EventosComponent } from './eventos/eventos.component';
 import { PalestrantesComponent } from './palestrantes/palestrantes.component';
 
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
       EventosComponent,
       PalestrantesComponent
@@ -16,7 +16,7 @@ import { PalestrantesComponent } from './palestrantes/palestrantes.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClient
   ],
   providers: [],
   bootstrap: [AppComponent]
