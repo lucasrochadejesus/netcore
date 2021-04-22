@@ -4,8 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using WebAPI.Data;
-using WebAPI.Models;
+using Domain;
+using Persistence;
 
 namespace WebAPI.Controllers
 {
